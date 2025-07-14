@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>p2’s Auto Spa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h2>Our Services</h2>
+    <div class="banner">
+      <div class="banner-text">
+        <h1>✨ p2’s Auto Spa</h1>
+        <p>Professional Care For Every Vehicle</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('carwash')">🚘 Car Wash</button>
+    <button class="tab" onclick="showTab('detailing')">🧼 Detailing</button>
+    <button class="tab" onclick="showTab('maintenance')">🔧 Maintenance</button>
+    <button class="tab" onclick="showTab('protection')">🛡️ Protection</button>
+  </div>
+
+  <main>
+    <!-- Car Wash Section -->
+    <section id="carwash" class="tab-content active">
+      <div class="card">
+        <div class="card-header">
+          <h3>Basic Wash</h3>
+          <span class="price">K50</span>
+        </div>
+        <p>Exterior rinse, soap wash, and dry</p>
+        <ul>
+          <li>✅ Pre-rinse</li>
+          <li>✅ Soap wash</li>
+          <li>✅ Hand dry</li>
+          <li>✅ Tire shine</li>
+        </ul>
+        <button class="book-btn" onclick="openBooking('Basic Wash - K50')">Book Now</button>
+      </div>
+
+      <div class="card popular">
+        <div class="card-header">
+          <h3>Premium Wash <span class="badge">Most Popular</span></h3>
+          <span class="price">K100</span>
+        </div>
+        <p>Full interior & exterior care</p>
+        <ul>
+          <li>✅ Everything in Basic</li>
+          <li>✅ Interior vacuum</li>
+          <li>✅ Dashboard wipe</li>
+        </ul>
+        <button class="book-btn" onclick="openBooking('Premium Wash - K100')">Book Now</button>
+      </div>
+    </section>
+
+    <!-- Other tabs (omitted for brevity) remain unchanged -->
+    <section id="detailing" class="tab-content">
+      <div class="card">
+        <h3>Interior Detailing – K150</h3>
+        <p>Deep cleaning for seats, carpets & dashboard</p>
+        <ul>
+          <li>✅ Steam clean</li>
+          <li>✅ Leather conditioning</li>
+          <li>✅ Odor removal</li>
+        </ul>
+        <button class="book-btn" onclick="openBooking('Interior Detailing – K150')">Book Now</button>
+      </div>
+    </section>
+
+    <section id="maintenance" class="tab-content">
+      <div class="card">
+        <h3>Quick Maintenance – K80</h3>
+        <p>Simple under-the-hood checks</p>
+        <ul>
+          <li>✅ Fluids check</li>
+          <li>✅ Tire pressure</li>
+          <li>✅ Battery test</li>
+        </ul>
+        <button class="book-btn" onclick="openBooking('Quick Maintenance – K80')">Book Now</button>
+      </div>
+    </section>
+
+    <section id="protection" class="tab-content">
+      <div class="card">
+        <h3>Paint Protection – K250</h3>
+        <p>Protect your vehicle’s shine for months</p>
+        <ul>
+          <li>✅ Ceramic coat</li>
+          <li>✅ UV protection</li>
+          <li>✅ Scratch guard</li>
+        </ul>
+        <button class="book-btn" onclick="openBooking('Paint Protection – K250')">Book Now</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBooking()">&times;</span>
+      <h2>Book Service</h2>
+      <p id="selectedService"></p>
+      <input type="text" placeholder="Full Name" />
+      <input type="text" placeholder="Phone Number" />
+      <input type="datetime-local" />
+      <button class="submit-btn">Confirm Booking</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="bottom-nav">
+      <button>🏠 Home</button>
+      <button class="active">🧽 Services</button>
+      <button>📅 Book</button>
+      <button>👤 Profile</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
